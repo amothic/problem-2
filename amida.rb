@@ -39,11 +39,11 @@ end
 print("\n")
 
 
-until ($connect >= ((2**i)-1)) do
-  for i in 0..8 do
+until ($connect >= ((2**(arg-1))-1)) do
+  for i in 0..ARGV[1].to_i do
     printout(0, arg-1, false)
   end
-  if ($connect >= ((2**i)-1)) then
+  if ($connect >= ((2**(arg-1))-1)) then
     puts $buff
   else
     $connect =0
@@ -51,3 +51,9 @@ until ($connect >= ((2**i)-1)) do
   end
 end
 
+
+a = rand(arg)
+a.times do
+  print("    ")
+end 
+print("*\n")
